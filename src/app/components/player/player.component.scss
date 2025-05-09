@@ -1,0 +1,19 @@
+.player {
+  position: relative;
+  &__image {
+    &__leyend {
+      height: 0.2rem;
+    }
+  }
+  &__data {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .player {
+    &__data {
+      font-size: 0.6rem;
+    }
+  }
+}

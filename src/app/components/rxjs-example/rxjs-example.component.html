@@ -1,0 +1,25 @@
+<div class="rxjs-example mt-5 border-bottom border-primary pb-5">
+  <app-example-introduction [example]="example" />
+  <app-example-code [example]="example" />
+  <div class="rxjs-example__result">
+    <app-execution [time]="totalTime" [loading]="loading$ | async" (actionGetPlayers)="click()" />
+    @if (!(loading$ | async)) {
+      @if (error$ | async) {
+        <app-error [error]="error$ | async"></app-error>
+      } @else {
+        <div class="row">
+          @for (player of players$ | async; track $index) {
+            <div class="col-4 text-center">
+              <app-player [player]="player" />
+            </div>
+          }
+          @if (chartDataSets.length) {
+            <div class="col-12 col-lg-6 offset-lg-3">
+              <app-chart [idChart]="'rxjs'" [dataSets]="chartDataSets" />
+            </div>
+          }
+        </div>
+      }
+    }
+  </div>
+</div>

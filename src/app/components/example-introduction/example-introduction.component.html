@@ -1,0 +1,19 @@
+<div class="example-introduction">
+  <div class="d-inline-flex align-items-center">
+    <h3 class="text-secondary"><i class="bi bi-asterisk text-primary"></i> {{ 'examples.' + example.title + '.title' | translate }}</h3>
+    @if (example.title === 'ngrx' || example.title === 'ngrxSignal') {
+      <div class="form-check form-switch ms-3">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          (change)="changeIsNgRxSignals()"
+          [checked]="utilsService.isNgRxSignals"
+          id="isNgRxSignals"
+        />
+        <label class="form-check-label text-primary fw-bold" for="flexSwitchCheckDefault">With Signals</label>
+      </div>
+    }
+  </div>
+  <div class="text-secondary" [innerHTML]="'examples.' + example.title + '.description' | translate"></div>
+</div>

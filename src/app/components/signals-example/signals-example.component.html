@@ -1,0 +1,25 @@
+<div class="signals-example mt-4 border-bottom border-primary pb-5">
+  <app-example-introduction [example]="example" />
+  <app-example-code [example]="example" />
+  <div class="signals-example__result">
+    <app-execution [time]="totalTime" [loading]="loading()" (actionGetPlayers)="click()" />
+    @if (!loading()) {
+      @if (error()) {
+        <app-error [error]="error()"></app-error>
+      } @else {
+        <div class="row">
+          @for (player of players(); track $index) {
+            <div class="col-4 text-center">
+              <app-player [player]="player" />
+            </div>
+          }
+          @if (chartDataSets.length) {
+            <div class="col-12 col-lg-6 offset-lg-3">
+              <app-chart [idChart]="'signals'" [dataSets]="chartDataSets" />
+            </div>
+          }
+        </div>
+      }
+    }
+  </div>
+</div>

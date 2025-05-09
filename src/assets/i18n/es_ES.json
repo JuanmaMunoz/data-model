@@ -1,0 +1,117 @@
+{
+  "english": "Inglés",
+  "spanish": "Español",
+  "introduction": {
+    "title": "¿Qué tecnología elegir para la gestión de estados de mi aplicación?",
+    "description": "<p>La <strong>arquitectura de un sistema Frontend</strong> debe estar alineada con las <strong>necesidades específicas del negocio y del producto</strong>, en lugar de basarse únicamente en <strong>tendencias o tecnologías populares</strong> sin evaluar sus ventajas e inconvenientes.</p><p>Sin embargo, muchas ofertas para el rol de <strong>Frontend Developer</strong> solicitan experiencia en <strong>tecnologías específicas</strong> sin considerar que <strong>cada proyecto presenta desafíos y objetivos particulares</strong>. La elección de <strong>herramientas y arquitecturas adecuadas</strong> debe fundamentarse en factores clave como:</p>",
+    "list": {
+      "scalability": {
+        "title": "Escalabilidad del proyecto",
+        "description": "¿Se requiere un <strong>sistema capaz de gestionar grandes volúmenes de datos y usuarios</strong>, o una <strong>solución más sencilla</strong> es suficiente?"
+      },
+      "independency": {
+        "title": "Independencia de los microfrontends",
+        "description": "¿Es esencial que los <strong>equipos y módulos estén completamente desacoplados</strong>, o pueden compartir <strong>estados y servicios</strong>?"
+      },
+      "maintenance": {
+        "title": "Mantenimiento y complejidad",
+        "description": "¿La <strong>elección tecnológica</strong> facilitará la <strong>comprensión y el mantenimiento del código</strong> a largo plazo, o añadirá una <strong>capa innecesaria de complejidad</strong>?"
+      },
+      "reactivity": {
+        "title": "Reactividad y gestión del estado",
+        "description": "¿Es necesario adoptar un <strong>enfoque estructurado</strong> como <strong>NgRx</strong>, o soluciones más ligeras como <strong>RxJS</strong> o <strong>Signals</strong> pueden ser más adecuadas?"
+      },
+      "capacity": {
+        "title": "Capacidades del equipo",
+        "description": "¿El equipo es mayormente <strong>Full-Stack</strong> con conocimientos básicos de <strong>Frontend</strong>, lo que requiere una <strong>arquitectura fácil de mantener</strong>, o se trata de un equipo especializado en <strong>Frontend</strong> que puede implementar una <strong>solución más avanzada</strong>?"
+      }
+    },
+    "conclusion": "<p>La falta de un <strong>análisis previo</strong> puede llevar a soluciones poco eficientes en términos de <strong>rendimiento</strong>, <strong>flexibilidad</strong> y <strong>facilidad de desarrollo</strong>.</p><p>En el desarrollo de aplicaciones <strong>Frontend</strong> con <strong>Angular</strong>, uno de los aspectos más críticos es la <strong>gestión del estado</strong> y el manejo de los <strong>flujos reactivos de datos</strong> entre componentes. Dependiendo de la <strong>complejidad de la aplicación</strong> y sus necesidades de <strong>escalabilidad</strong>, las <strong>herramientas y enfoques para gestionar el estado</strong> pueden variar considerablemente.</p><p>Tres de las soluciones más utilizadas para estos desafíos son <strong>Angular Signals</strong>, <strong>RxJS Subjects</strong>, y <strong>NgRx</strong>. Cada una ofrece <strong>características</strong>, <strong>ventajas</strong> y <strong>desventajas</strong> particulares, por lo que su idoneidad depende del <strong>contexto</strong> y los <strong>requisitos específicos del proyecto</strong>.</p>"
+  },
+  "table": {
+    "title": "Comparativa Angular Signals <span class='text-secondary'>vs</span> RxJS Subjects <span class='text-secondary'>vs</span> NgRx",
+    "description": "Desde mi perspectiva y basándome en mi <strong>experiencia</strong>, he elaborado esta tabla que compara las <strong>ventajas</strong> y <strong>desventajas</strong> de estas tres herramientas para la <strong>gestión de estados</strong> en una aplicación. Para ello, he considerado factores como la <strong>complejidad</strong>, el <strong>rendimiento</strong>, los <strong>tipos de aplicaciones</strong>, etc. Cabe destacar que esta es mi <strong>opinión personal</strong> y cada lector podrá tener su propio <strong>punto de vista</strong>.",
+    "paradigm": {
+      "title": "Paradigma",
+      "signals": "Reactivo y basado en señales",
+      "rxjs": "Programación reactiva basada en streams",
+      "ngrx": "Estado centralizado basado en Redux"
+    },
+    "complexity": {
+      "title": "Complejidad",
+      "signals": "<span class='text-success'>Muy fácil de entender y usar</span>",
+      "rxjs": "<span class='text-warning'>Requiere conocimiento de RxJS</span>",
+      "ngrx": "<span class='text-danger'>Requiere conocimiento de RxJS y Redux</span>"
+    },
+    "performance": {
+      "title": "Rendimiento",
+      "signals": "<span class='text-success'>Alto (recalculado solo cuando cambia la señal)</span>",
+      "rxjs": "<span class='text-success'>Alto (gestión manual del flujo de datos)</span>",
+      "ngrx": "<span class='text-warning'>Puede ser menos eficiente por el uso de reducers e immutable state</span>"
+    },
+    "developmentTime": {
+      "title": "Tiempo de desarrollo",
+      "signals": "<span class='text-success'>Muy Bajo</span>",
+      "rxjs": "<span class='text-success'>Bajo</span>",
+      "ngrx": "<span class='text-danger'>Alto</span>"
+    },
+    "strategyChange": {
+      "title": "Estrategia de cambio",
+      "signals": "Mediante .set() y .update()",
+      "rxjs": "Mediante .next()</span>",
+      "ngrx": "Basada en Redux (acciones, reducers y efectos)"
+    },
+    "unsubscribe": {
+      "title": "Requiere Desuscripción",
+      "signals": "<span class='text-success'>No</span>",
+      "rxjs": "<span class='text-danger'>Si</span>",
+      "ngrx": "<span class='text-danger'>Si con observables</span>, <span class='text-success'>No con Signals (Angular 17)</span>"
+    },
+    "debug": {
+      "title": "Depuración",
+      "signals": "<span class='text-success'>Fácil de depurar</span>",
+      "rxjs": "<span class='text-warning'>Puede volverse complejo</span>",
+      "ngrx": "<span class='text-success'>Herramientas avanzadas como Redux DevTools</span>"
+    },
+    "appTypes": {
+      "title": "Adecuado para",
+      "signals": "Apps pequeñas, medianas y micro-fronts",
+      "rxjs": "Apps pequeñas, medianas y micro-fronts",
+      "ngrx": "Aplicaciones monolíticas grandes o micro-fronts con store propio"
+    },
+    "compatibility": {
+      "title": "Compatibilidad",
+      "signals": "<span class='text-danger'>No disponible antes de Angular 16</span>",
+      "rxjs": "<span class='text-success'>Disponible en todas las versiones</span>",
+      "ngrx": "<span class='text-success'>Disponible en todas las versiones</span>"
+    }
+  },
+  "examples": {
+    "service": "Utilizaremos un servicio <strong>HttpClient</strong> para obtener los datos desde un archivo <strong>JSON</strong>. Este servicio tiene un retraso simulado de <strong>250 ms</strong>, el cual se resta del tiempo total de renderizado. Este servicio es compartido por todos los ejemplos.",
+    "title": "Comparativa de códigos",
+    "result": "Ejemplo en directo",
+    "performance": "Tiempo de renderizado",
+    "description": "<p>En esta parte vamos a comparar cómo se ven y funcionan <strong>tres tecnologías diferentes</strong> con un mismo ejemplo. Vamos a mostrar cómo <strong>obtener datos</strong> de algunos futbolistas, <strong>visualizarlos en pantalla</strong>, manejar posibles <strong>errores</strong> y mostrar un <strong>indicador de carga</strong> mientras se procesan. Además, usaremos parte de esa información para <strong>crear una gráfica</strong>.</p><p>También mediremos el <strong>tiempo</strong> que tarda cada tecnología en mostrar la información utilizando la <strong>API de rendimiento de Angular</strong>. Aunque hicimos estas pruebas para comparar el <strong>rendimiento</strong>, no se pudo llegar a <strong>conclusiones importantes</strong> en ese aspecto.</p>",
+    "alert": "Es importante destacar que son <strong>ejemplos básicos con fines didácticos</strong>, por lo que no se incluyen algunas <strong>características esenciales</strong> en una aplicación real, ni se profundiza en los <strong>componentes utilizados para visualizar la información</strong>. Este tutorial se centra específicamente en los <strong>cambios de estado de nuestros modelos de datos</strong>.",
+    "signal": {
+      "title": "Signals",
+      "description": "<p>A través de la función <strong>getPlayers()</strong>, se invoca al servicio encargado de recuperar los datos de los futbolistas. Durante la suscripción a este servicio, los datos obtenidos se almacenan en nuestro <strong>signal</strong> mediante el método <strong>set()</strong>.</p><p>Además, en el <strong>constructor</strong> del componente, se establece un <strong>effect</strong> que supervisa los cambios en el signal. De este modo, una vez que el signal <strong>players</strong> contiene la información necesaria, se ejecuta el método <strong>createDataSets()</strong> del servicio <strong>ChartService</strong>, el cual nos proporciona los datos requeridos para la gráfica.</p><p>Finalmente, en el <strong>template</strong>, se itera el signal <strong>players</strong> para renderizar los componentes <strong>app-player</strong>. También pasamos los datos correspondientes al componente <strong>app-chart</strong> para generar la gráfica.</p>"
+    },
+    "rxjs": {
+      "title": "RxJS Subjects",
+      "description": "<p>A través de la función <strong>getPlayers()</strong>, se invoca el servicio encargado de recuperar los datos de los futbolistas. Durante la suscripción a este servicio, dichos datos se almacenan en nuestro <strong>BehaviorSubject</strong> mediante el método <strong>next()</strong>.</p><p>Además, en el hook <strong>ngOnInit</strong> del componente nos subscribimos a los cambios de nuestro <strong>BehaviorSubject</strong>, de manera que, una vez el <strong>BehaviorSubject</strong> disponga de la información necesaria, se ejecute el método <strong>createChartData()</strong>.</p><p>En el hook <strong>ngOnDestroy</strong> desuscribimos nuestro <strong>BehaviorSubject</strong> al ser un observable de larga duración, para evitar fuga de memoria y comportamientos no deseados.</p><p>Finalmente, en el <strong>template</strong> se itera el <strong>BehaviorSubject</strong> mediante la pipe <strong>async</strong> para renderizar los componentes <strong>app-player</strong>, y se pasan los datos correspondientes al componente <strong>app-chart</strong> para generar la gráfica.</p>"
+    },
+    "ngrx": {
+      "title": "NgRx",
+      "description": "<p>A través de la función <strong>getPlayers()</strong>, disparamos la acción <strong>loadPlayers()</strong>, la cual es escuchada o interceptada por el efecto <strong>loadPlayers$</strong> encargado de recuperar los datos de los futbolistas.</p><p> En el <strong>constructor</strong> de nuestro componente, relacionamos los <strong>observables</strong> con los distintos <strong>states</strong> de nuestro <strong>store</strong> y en el hook <strong>ngOnInit()</strong> nos subscribimos a los cambios del observable <strong>players$</strong>. De este modo, una vez que contiene la información necesaria, se ejecuta el método <strong>createDataSets()</strong> del servicio <strong>ChartService</strong>, el cual nos proporciona los datos requeridos para la gráfica.</p><p> El observable <strong>players$</strong>, al ser un observable de larga duración, requiere su desuscripción en el hook <strong>ngOnDestroy</strong> de nuestro componente.</p><p>Finalmente, en el <strong>template</strong>, se itera el observable <strong>players$</strong> con la pipe <strong>async</strong> para renderizar los componentes <strong>app-player</strong>. También pasamos los datos correspondientes al componente <strong>app-chart</strong> para generar la gráfica.</p>"
+    },
+    "ngrxSignal": {
+      "title": "NgRx",
+      "description": "<p>A través de la función <strong>getPlayers()</strong>, disparamos la acción <strong>loadPlayers()</strong>, la cual es escuchada por el efecto <strong>loadPlayers$</strong>, encargado de recuperar los datos de los futbolistas.</p><p>En el <strong>constructor</strong> de nuestro componente, relacionamos los <strong>signals</strong> con los distintos <strong>states</strong> de nuestro <strong>store</strong> mediante la función <strong>toSignal()</strong>, la cual transforma un <strong>observable</strong> en un <strong>signal</strong>. También en el constructor, definimos un <strong>effect</strong> que escucha los cambios del signal <strong>players</strong> y, una vez que contiene la información necesaria, se ejecuta el método <strong>createDataSets()</strong> del servicio <strong>ChartService</strong>, que nos proporciona los datos requeridos para la gráfica.</p><p>Finalmente, en el <strong>template</strong>, se itera el signal <strong>players</strong> para renderizar los componentes <strong>app-player</strong>. También se pasan los datos correspondientes al componente <strong>app-chart</strong> para generar la gráfica.</p>"
+    }
+  },
+  "conclusion": {
+    "title": "Conclusión",
+    "description": "<p>Desde mi punto de vista, cada una de estas tecnologías tiene sus propias fortalezas y debilidades. Podemos ver la sencillez de los <strong>Signals</strong>, la versatilidad de los <strong>Subjects</strong> o la estructura bien definida de <strong>NgRx</strong>. Lo más valioso es entender cómo funciona cada una, ya que probablemente, en nuestra carrera profesional, debamos utilizarlas de forma individual o combinada según el caso.</p><p>La idea de este post no es decir cuál es <strong>'mejor'</strong>, sino ofrecer una perspectiva clara para que cada lector pueda sacar sus propias conclusiones a partir de las comparativas.</p><p>No hay una opción idónea para todos los casos, por lo que posiblemente la fórmula perfecta esté en el conocimiento de cada una de las alternativas y saber cuándo implementarlas.</p>"
+  }
+}

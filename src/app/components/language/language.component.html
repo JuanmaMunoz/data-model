@@ -1,0 +1,30 @@
+<div class="language">
+  <div class="language__item form-check">
+    <input
+      [(ngModel)]="language"
+      [value]="languageEnum.ENGLISH"
+      (ngModelChange)="setLanguage(languageEnum.ENGLISH)"
+      type="radio"
+      name="language-{{ id }}"
+      id="english-{{ id }}"
+      class="form-check-input"
+    />
+    <label class="form-check-label fw-bold text-secondary" for="english-{{ id }}">
+      {{ 'english' | translate }}
+    </label>
+  </div>
+  <div class="language__item form-check">
+    <input
+      [(ngModel)]="language"
+      [value]="languageEnum.SPANISH"
+      (ngModelChange)="setLanguage(languageEnum.SPANISH)"
+      type="radio"
+      name="language-{{ id }}"
+      id="spanish-{{ id }}"
+      class="form-check-input"
+    />
+    <label class="form-check-label fw-bold text-secondary" for="spanish-{{ id }}">
+      {{ 'spanish' | translate }}
+    </label>
+  </div>
+</div>

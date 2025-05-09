@@ -1,0 +1,83 @@
+.header {
+  background: url('/assets/images/clouds_new.png') no-repeat center center;
+  background-size: cover;
+  padding: 5rem 2rem 3rem 2rem;
+  &__language {
+    position: absolute;
+    right: 1rem;
+    top: -1rem;
+  }
+  &__text {
+    animation: showText 0.5s ease-out 0.5s forwards;
+    color: #ed168fff;
+    opacity: 0;
+    &--secondary {
+      color: #4b2074ff;
+    }
+  }
+  &__logo {
+    animation: showLogo 0.5s;
+    width: 20rem;
+  }
+  h1 {
+    font-size: 5rem;
+    & > span {
+      font-size: 4rem;
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .header {
+    h1 {
+      font-size: 3.5rem;
+      & > span {
+        font-size: 2.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .header {
+    padding: 2rem;
+    h1 {
+      font-size: 2.5rem;
+      & > span {
+        font-size: 1.5rem;
+      }
+    }
+  }
+}
+
+@media (max-width: 576px) {
+  .header {
+    h1 {
+      font-size: 2rem;
+    }
+  }
+}
+
+@keyframes showLogo {
+  0% {
+    opacity: 0.3;
+    transform: scale(0.5);
+  }
+  70% {
+    opacity: 0.7;
+    transform: scale(1.1);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes showText {
+  0% {
+    opacity: 0.3;
+  }
+  100% {
+    opacity: 1;
+  }
+}

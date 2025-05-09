@@ -1,0 +1,27 @@
+<h2 [innerHTML]="'table.title' | translate" class="text-primary"></h2>
+<p class="text-secondary" [innerHTML]="'table.description' | translate"></p>
+<div class="table-responsive">
+  <table class="table table-sm">
+    <thead>
+      <tr>
+        <th></th>
+        <th class="text-nowrap"><i class="bi bi-asterisk text-primary"></i> Signals</th>
+        <th class="text-nowrap"><i class="bi bi-asterisk text-primary"></i> RxJS Subjects</th>
+        <th class="text-nowrap"><i class="bi bi-asterisk text-primary"></i> NgRx</th>
+      </tr>
+    </thead>
+    <tbody>
+      @for (row of rows; track $index) {
+        <tr class="fw-bold">
+          <td>
+            <!--<i class="bi bi-graph-up-arrow text-secondary"></i>-->
+            <span [innerHTML]="'table.' + row + '.title' | translate" class="text-primary"></span>
+          </td>
+          <td [innerHTML]="'table.' + row + '.signals' | translate"></td>
+          <td [innerHTML]="'table.' + row + '.rxjs' | translate"></td>
+          <td [innerHTML]="'table.' + row + '.ngrx' | translate"></td>
+        </tr>
+      }
+    </tbody>
+  </table>
+</div>

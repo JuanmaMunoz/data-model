@@ -1,0 +1,7 @@
+.language {
+  display: inline-flex;
+  &__item {
+    color: var(--clear-color);
+    margin: 1.3rem 0 0 0.5rem;
+  }
+}

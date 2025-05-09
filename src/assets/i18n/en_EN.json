@@ -1,0 +1,117 @@
+{
+  "english": "English",
+  "spanish": "Spanish",
+  "introduction": {
+    "title": "Which technology to choose for managing my application's state?",
+    "description": "<p>The <strong>architecture of a Frontend system</strong> should be aligned with the <strong>specific needs of the business and product</strong>, rather than being based solely on <strong>trends or popular technologies</strong> without evaluating their advantages and disadvantages.</p><p>However, many job listings for the <strong>Frontend Developer</strong> role ask for experience with <strong>specific technologies</strong> without considering that <strong>each project presents its own challenges and objectives</strong>. The choice of <strong>appropriate tools and architectures</strong> should be based on key factors such as:</p>",
+    "list": {
+      "scalability": {
+        "title": "Project scalability",
+        "description": "Does the project require a <strong>system capable of managing large volumes of data and users</strong>, or is a <strong>simpler solution</strong> enough?"
+      },
+      "independency": {
+        "title": "Microfrontend independence",
+        "description": "Is it essential for <strong>teams and modules to be fully decoupled</strong>, or can they share <strong>states and services</strong>?"
+      },
+      "maintenance": {
+        "title": "Maintenance and complexity",
+        "description": "Will the <strong>technology choice</strong> make it easier to <strong>understand and maintain the code</strong> in the long term, or will it add an <strong>unnecessary layer of complexity</strong>?"
+      },
+      "reactivity": {
+        "title": "Reactivity and state management",
+        "description": "Is it necessary to adopt a <strong>structured approach</strong> like <strong>NgRx</strong>, or could lighter solutions like <strong>RxJS</strong> or <strong>Signals</strong> be more suitable?"
+      },
+      "capacity": {
+        "title": "Team capabilities",
+        "description": "Is the team mostly <strong>Full-Stack</strong> with basic <strong>Frontend</strong> knowledge, requiring an <strong>easy-to-maintain architecture</strong>, or is it a team specialized in <strong>Frontend</strong> that can implement a <strong>more advanced solution</strong>?"
+      }
+    },
+    "conclusion": "<p>The lack of a <strong>prior analysis</strong> can lead to inefficient solutions in terms of <strong>performance</strong>, <strong>flexibility</strong>, and <strong>ease of development</strong>.</p><p>In Frontend development with <strong>Angular</strong>, one of the most critical aspects is <strong>state management</strong> and handling <strong>reactive data flows</strong> between components. Depending on the <strong>complexity of the application</strong> and its <strong>scalability</strong> needs, the <strong>tools and approaches for state management</strong> can vary significantly.</p><p>Three of the most commonly used solutions for these challenges are <strong>Angular Signals</strong>, <strong>RxJS Subjects</strong>, and <strong>NgRx</strong>. Each one offers <strong>features</strong>, <strong>advantages</strong>, and <strong>disadvantages</strong> that depend on the <strong>context</strong> and <strong>specific project requirements</strong>.</p>"
+  },
+  "table": {
+    "title": "Angular Signals <span class='text-secondary'>vs</span> RxJS Subjects <span class='text-secondary'>vs</span> NgRx Comparison",
+    "description": "From my perspective and based on my <strong>experience</strong>, I have created this table comparing the <strong>advantages</strong> and <strong>disadvantages</strong> of these three tools for <strong>state management</strong> in an application. To do this, I have considered factors such as <strong>complexity</strong>, <strong>performance</strong>, <strong>application types</strong>, etc. It is important to note that this is my <strong>personal opinion</strong> and each reader may have their own <strong>point of view</strong>.",
+    "paradigm": {
+      "title": "Paradigm",
+      "signals": "Reactive and signal-based",
+      "rxjs": "Reactive programming based on streams",
+      "ngrx": "Centralized state based on Redux"
+    },
+    "complexity": {
+      "title": "Complexity",
+      "signals": "<span class='text-success'>Very easy to understand and use</span>",
+      "rxjs": "<span class='text-warning'>Requires knowledge of RxJS</span>",
+      "ngrx": "<span class='text-danger'>Requires knowledge of RxJS and Redux</span>"
+    },
+    "performance": {
+      "title": "Performance",
+      "signals": "<span class='text-success'>High (recalculated only when the signal changes)</span>",
+      "rxjs": "<span class='text-success'>High (manual flow management)</span>",
+      "ngrx": "<span class='text-warning'>Can be less efficient due to the use of reducers and immutable state</span>"
+    },
+    "developmentTime": {
+      "title": "Development Time",
+      "signals": "<span class='text-success'>Very Low</span>",
+      "rxjs": "<span class='text-success'>Low</span>",
+      "ngrx": "<span class='text-danger'>High</span>"
+    },
+    "strategyChange": {
+      "title": "Change strategy",
+      "signals": "Via .set() and .update()",
+      "rxjs": "Via .next()</span>",
+      "ngrx": "Based on Redux (actions, reducers, and effects)"
+    },
+    "unsubscribe": {
+      "title": "Requires Unsubscription",
+      "signals": "<span class='text-success'>No</span>",
+      "rxjs": "<span class='text-danger'>Yes</span>",
+      "ngrx": "<span class='text-danger'>Yes with observables</span>, <span class='text-success'>No with Signals (Angular 17)</span>"
+    },
+    "debug": {
+      "title": "Debugging",
+      "signals": "<span class='text-success'>Easy to debug</span>",
+      "rxjs": "<span class='text-warning'>Can become complex</span>",
+      "ngrx": "<span class='text-success'>Advanced tools like Redux DevTools</span>"
+    },
+    "appTypes": {
+      "title": "Suitable for",
+      "signals": "Small, medium apps, and micro-fronts",
+      "rxjs": "Small, medium apps, and micro-fronts",
+      "ngrx": "Large monolithic apps or micro-fronts with their own store"
+    },
+    "compatibility": {
+      "title": "Compatibility",
+      "signals": "<span class='text-danger'>Not available before Angular 16</span>",
+      "rxjs": "<span class='text-success'>Available in all versions</span>",
+      "ngrx": "<span class='text-success'>Available in all versions</span>"
+    }
+  },
+  "examples": {
+    "service": "We will use an <strong>HttpClient</strong> service to fetch data from a <strong>JSON</strong> file. This service has a simulated delay of <strong>250 ms</strong>, which is subtracted from the total rendering time. This service is shared across all examples.",
+    "title": "Code Comparison",
+    "result": "Live Example",
+    "performance": "Rendering Time",
+    "description": "<p>In this section, we will compare how <strong>three different technologies</strong> look and function with the same example. We will demonstrate how to <strong>retrieve data</strong> from football players, <strong>display it on the screen</strong>, handle possible <strong>errors</strong>, and show a <strong>loading indicator</strong> while processing. Additionally, we will use part of this information to <strong>create a chart</strong>.</p><p>We will also measure the <strong>time</strong> it takes for each technology to display the information using the <strong>Angular performance API</strong>. Although we conducted these tests to compare <strong>performance</strong>, no <strong>significant conclusions</strong> were reached in this aspect.</p>",
+    "alert": "It is important to note that these are <strong>basic examples for educational purposes</strong>, so some <strong>essential features</strong> for a real application are not included, and we do not go deep into the <strong>components used to display the information</strong>. This tutorial specifically focuses on the <strong>state changes of our data models</strong>.",
+    "signal": {
+      "title": "Signals",
+      "description": "<p>Through the function <strong>getPlayers()</strong>, we invoke the service responsible for retrieving football players' data. During the subscription to this service, the obtained data is stored in our <strong>signal</strong> using the <strong>set()</strong> method.</p><p>Additionally, in the <strong>constructor</strong> of the component, an <strong>effect</strong> is set up to monitor changes in the signal. This way, once the signal <strong>players</strong> contains the necessary information, the <strong>createDataSets()</strong> method from the <strong>ChartService</strong> is executed, providing the data needed for the chart.</p><p>Finally, in the <strong>template</strong>, we iterate over the <strong>players</strong> signal to render the <strong>app-player</strong> components. We also pass the corresponding data to the <strong>app-chart</strong> component to generate the chart.</p>"
+    },
+    "rxjs": {
+      "title": "RxJS Subjects",
+      "description": "<p>Through the function <strong>getPlayers()</strong>, we invoke the service responsible for retrieving the football players' data. During the subscription to this service, the data is stored in our <strong>BehaviorSubject</strong> using the <strong>next()</strong> method.</p><p>Additionally, in the <strong>ngOnInit</strong> hook of the component, we subscribe to changes in our <strong>BehaviorSubject</strong>, so once the <strong>BehaviorSubject</strong> contains the necessary information, the <strong>createChartData()</strong> method is executed.</p><p>In the <strong>ngOnDestroy</strong> hook, we unsubscribe from the <strong>BehaviorSubject</strong> as it is a long-lived observable to prevent memory leaks and undesired behavior.</p><p>Finally, in the <strong>template</strong>, we iterate over the <strong>BehaviorSubject</strong> using the <strong>async</strong> pipe to render the <strong>app-player</strong> components, and pass the corresponding data to the <strong>app-chart</strong> component to generate the chart.</p>"
+    },
+    "ngrx": {
+      "title": "NgRx",
+      "description": "<p>Through the function <strong>getPlayers()</strong>, we dispatch the <strong>loadPlayers()</strong> action, which is intercepted by the <strong>loadPlayers$</strong> effect responsible for retrieving the football players' data.</p><p>In the <strong>constructor</strong> of our component, we link the <strong>observables</strong> with the various <strong>states</strong> of our <strong>store</strong>, and in the <strong>ngOnInit()</strong> hook, we subscribe to changes in the <strong>players$</strong> observable. This way, once it contains the necessary information, the <strong>createDataSets()</strong> method from the <strong>ChartService</strong> is executed, providing the data needed for the chart.</p><p>The <strong>players$</strong> observable, being a long-lived observable, requires unsubscribing in the <strong>ngOnDestroy</strong> hook of our component.</p><p>Finally, in the <strong>template</strong>, we iterate over the <strong>players$</strong> observable with the <strong>async</strong> pipe to render the <strong>app-player</strong> components. We also pass the corresponding data to the <strong>app-chart</strong> component to generate the chart.</p>"
+    },
+    "ngrxSignal": {
+      "title": "NgRx",
+      "description": "<p>Through the function <strong>getPlayers()</strong>, we dispatch the <strong>loadPlayers()</strong> action, which is listened to by the <strong>loadPlayers$</strong> effect responsible for retrieving the football players' data.</p><p>In the <strong>constructor</strong> of our component, we link the <strong>signals</strong> with the various <strong>states</strong> of our <strong>store</strong> using the <strong>toSignal()</strong> function, which converts an <strong>observable</strong> into a <strong>signal</strong>. Also, in the constructor, we define an <strong>effect</strong> that listens for changes in the <strong>players</strong> signal, and once it contains the necessary information, the <strong>createDataSets()</strong> method from the <strong>ChartService</strong> is executed, providing the data needed for the chart.</p><p>Finally, in the <strong>template</strong>, we iterate over the <strong>players</strong> signal to render the <strong>app-player</strong> components. We also pass the corresponding data to the <strong>app-chart</strong> component to generate the chart.</p>"
+    }
+  },
+  "conclusion": {
+    "title": "Conclusion",
+    "description": "<p>From my point of view, each of these technologies has its own strengths and weaknesses. We can see the simplicity of <strong>Signals</strong>, the versatility of <strong>Subjects</strong>, or the well-defined structure of <strong>NgRx</strong>. The most valuable thing is understanding how each one works, as we will likely need to use them either individually or combined depending on the case in our professional careers.</p><p>The purpose of this post is not to say which is <strong>'better'</strong>, but to offer a clear perspective so that each reader can draw their own conclusions from the comparisons.</p><p>There is no ideal option for all cases, so the perfect formula may lie in understanding each of the alternatives and knowing when to implement them.</p>"
+  }
+}

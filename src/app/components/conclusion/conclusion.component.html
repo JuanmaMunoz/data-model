@@ -1,0 +1,22 @@
+<div class="conclusion">
+  <h2 class="text-primary">{{ 'conclusion.title' | translate }}</h2>
+  <div class="row">
+    <div class="col-md-6 text-center">
+      <img [src]="image" alt="Juan Manuel Muñoz González" class="conclusion__photo img-fluid" />
+      <h6 class="text-primary mt-3">Juan Manuel Muñoz González</h6>
+      <p class="text-secondary">
+        Front End Architect
+        <a
+          class="link-underline link-underline-opacity-0"
+          target="_blank"
+          href="https://www.linkedin.com/in/juan-manuel-mu%C3%B1oz-gonz%C3%A1lez/"
+          ><i class="bi bi-linkedin"></i
+        ></a>
+        <a class="link-underline link-underline-opacity-0 ms-2" target="_blank" href="https://juanmamunoz.github.io/resume/#/info"
+          ><i class="bi bi-file-person"></i
+        ></a>
+      </p>
+    </div>
+    <div class="col-md-6 text-secondary" [innerHTML]="'conclusion.description' | translate"></div>
+  </div>
+</div>

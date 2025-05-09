@@ -1,0 +1,16 @@
+<div class="example__code row">
+  <div class="col-xl-6">
+    <app-code [code]="example.componentCode" [title]="'Component'" />
+  </div>
+  <div class="col-xl-6">
+    <app-code [code]="example.htmlCode" [title]="'Html'" />
+  </div>
+  @if (example.title.includes('ngrx')) {
+    <div class="col-xl-6">
+      <app-code [code]="actionsReducers" [title]="'Actions, Reducers'" />
+    </div>
+    <div class="col-xl-6">
+      <app-code [code]="effects" [title]="'Effects'" />
+    </div>
+  }
+</div>

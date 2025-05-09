@@ -1,0 +1,9 @@
+.chart {
+  height: 40rem;
+}
+
+@media (max-width: 576px) {
+  .chart {
+    height: auto;
+  }
+}

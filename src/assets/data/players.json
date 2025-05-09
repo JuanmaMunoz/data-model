@@ -1,0 +1,38 @@
+[
+  {
+    "name": "Messi",
+    "goalMatch": 78,
+    "winMatch": 70,
+    "maxSpeed": 32.5,
+    "adwardWon": 42,
+    "goldenBall": 8,
+    "dribbling": 95,
+    "shotPower": 80,
+    "color": "rgba(90, 200, 250, 1)",
+    "image": "assets/images/messi.png"
+  },
+  {
+    "name": "Cristiano",
+    "goalMatch": 73,
+    "winMatch": 66,
+    "maxSpeed": 33.6,
+    "adwardWon": 34,
+    "goldenBall": 5,
+    "dribbling": 85,
+    "shotPower": 95,
+    "color": "rgba(254, 110, 242,1)",
+    "image": "assets/images/cristiano.png"
+  },
+  {
+    "name": "Mbappé",
+    "goalMatch": 74,
+    "winMatch": 68,
+    "maxSpeed": 36,
+    "adwardWon": 14,
+    "goldenBall": 0,
+    "dribbling": 85,
+    "shotPower": 90,
+    "color": "rgba(75, 32, 116,1)",
+    "image": "assets/images/mbappe.png"
+  }
+]

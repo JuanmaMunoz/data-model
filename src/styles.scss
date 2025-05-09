@@ -1,1 +1,112 @@
 /* You can add global styles to this file, and also import other style files */
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
+$blue: #0d6efd;
+$indigo: #6610f2;
+$purple: #6f42c1;
+$pink: #d63384;
+$red: #d34351;
+$orange: #eca367;
+$yellow: #ffc107;
+$green: #690;
+$teal: #20c997;
+$cyan: #5ac8fa;
+$white: #fff;
+$gray-100: #f8f9fa;
+$gray-200: #e9ecef;
+$gray-300: #dee2e6;
+$gray-400: #ced4da;
+$gray-500: #adb5bd;
+$gray-600: #6c757d;
+$gray-700: #495057;
+$gray-800: #343a40;
+$gray-900: #212529;
+$black: #000;
+
+//$primary: #ed168fff;
+//$secondary: #4b2074ff;
+$primary: #ee5b97;
+$secondary: #6d3b8e;
+$success: $green;
+$info: $cyan;
+$warning: $orange;
+$danger: $red;
+//$light: #fdf4fc;
+$light: white;
+$dark: #1a1a1a;
+//$dark: #212529;
+
+$theme-colors: (
+  "primary": $primary,
+  "secondary": $secondary,
+  "success": $success,
+  "info": $info,
+  "warning": $warning,
+  "danger": $danger,
+  "light": $light,
+  "dark": $dark,
+);
+
+@import "../node_modules/bootstrap/scss/bootstrap.scss";
+
+body {
+  //background-color: var(--bs-dark);
+  font-family: "Roboto", serif;
+  //font-size: 1.1rem;
+  //font-weight: 500;
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar {
+  height: 0.3rem;
+  width: 0.3rem;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 0px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 0px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #b3b2b2;
+}
+
+.btn {
+  color: var(--bs-white) !important;
+}
+
+.table {
+  --bs-table-bg: none;
+  --bs-table-border-color: var(--bs-primary);
+}
+
+th {
+  color: var(--bs-secondary) !important;
+  font-size: 1.3rem;
+}
+
+td {
+  color: var(--bs-secondary) !important;
+}
+
+@media (max-width: 576px) {
+  body {
+    font-size: 0.9rem;
+  }
+}
+
+.btn-outline-primary {
+  color: var(--bs-primary) !important;
+}
+
+.btn-outline-primary:hover {
+  color: var(--bs-light) !important;
+}

@@ -1,0 +1,11 @@
+<div class="introduction">
+  <h2 [innerHTML]="'introduction.title' | translate" class="text-primary"></h2>
+  <div [innerHTML]="'introduction.description' | translate" class="text-secondary"></div>
+  @for (item of introductionList; track $index) {
+    <app-item-list
+      [title]="'introduction.list.' + item + '.title'"
+      [description]="'introduction.list.' + item + '.description'"
+    ></app-item-list>
+  }
+  <div [innerHTML]="'introduction.conclusion' | translate" class="text-secondary mt-3"></div>
+</div>
